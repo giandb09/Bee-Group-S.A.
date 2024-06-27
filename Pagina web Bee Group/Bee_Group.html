@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bee Group S.A.</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #ffffff; /* Fondo blanco */
+            color: #000000; /* Texto negro */
+        }
+        header {
+            background-color: #2c3e50; /* Azul marino */
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 2px solid #333333; /* Línea negra */
+        }
+        .logo {
+            max-width: 150px;
+            height: auto;
+            border-radius: 50%; /* Hacer el logo circular */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+        }
+        .header-content {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        nav a {
+            color: #ffffff; /* Texto blanco */
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            flex: 1;
+            padding: 20px;
+            background-color: #ffffff; /* Fondo blanco */
+        }
+        .story-box {
+            background-color: #2c3e50; /* Azul marino */
+            color: #ffffff; /* Texto blanco */
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            border: 2px solid #333333; /* Borde negro */
+            text-align: center;
+        }
+        .story-box a {
+            color: #ffffff; /* Color blanco para el enlace */
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .story-box a:hover {
+            text-decoration: underline; /* Subraya el enlace al pasar el ratón */
+        }
+        footer {
+            background-color: #ffffff; /* Fondo blanco */
+            padding: 20px;
+            text-align: left;
+            border-top: 2px solid #333333; /* Línea negra */
+            margin-top: 40px; /* Margen superior para separar del contenido principal */
+        }
+        .contact-info-footer {
+            display: flex;
+            justify-content: space-between;
+            background-color: #2c3e50; /* Azul marino */
+            color: #ffffff; /* Texto blanco */
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #333333; /* Borde negro */
+            margin-top: 20px;
+        }
+        .contact-info-section {
+            flex: 1;
+            margin-right: 20px;
+        }
+        .contact-info-section h2 {
+            color: #ffffff; /* Texto blanco */
+            text-align: left;
+        }
+        .contact-info-section p {
+            text-align: left;
+            margin: 0; /* Aseguramos que no haya margen adicional */
+            padding-bottom: 5px; /* Espacio entre líneas */
+        }
+        .branches-section {
+            flex: 1;
+        }
+        .branches-section h2 {
+            color: #ffffff; /* Texto blanco */
+            text-align: left;
+        }
+        .branches-section ul {
+            text-align: left;
+            margin: 0; /* Aseguramos que no haya margen adicional */
+            padding-left: 20px; /* Indentación para la lista */
+        }
+        .branches-section ul li {
+            list-style-type: disc; /* Puntos para la lista */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="/static/Logo prueba 2.jpeg" alt="Logo de Bee Group S.A." class="logo">
+        <div class="header-content">
+            <nav>
+                <a href="#">Inicio</a>
+                <a href="Servicios.html">Servicios</a>
+                <a href="Nosotros.html">Nosotros</a>
+                <a href="#">Contacto</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <p>Bienvenido a la página de Bee Group S.A.!</p>
+        <div class="story-box">
+            <a href="Historia.html">Nuestra historia</a>
+        </div>
+    </main>
+    <footer>
+        <div class="contact-info-footer">
+            <div class="contact-info-section">
+                <h2>Información de Contacto</h2>
+                <p><strong>Teléfono:</strong> 123-456-7890</p>
+                <p><strong>Celular:</strong> 0985-701-545</p>
+                <p><strong>Correo Electrónico:</strong> serviciosbeegroup@gmail.com</p>
+                <p><strong>Dirección:</strong> Pettirossi 488 e/ Pai Perez y Peru Asunción, Paraguay</p>
+            </div>
+            <div class="branches-section">
+                <h2>Sucursales</h2>
+                <ul>
+                    <li>Eusebio Ayala</li>
+                    <li>Mercado 4</li>
+                    <li>Luque</li>
+                    <li>Acceso Sur</li>
+                </ul>
+            </div>
+        </div>
+        <p>&copy; 2024 Bee Group S.A. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
