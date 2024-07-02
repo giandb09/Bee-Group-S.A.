@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios - Bee Group S.A.</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #ffffff; /* Fondo blanco */
+            color: #000000; /* Texto negro */
+        }
+        header {
+            background-color: #2c3e50; /* Fondo gris oscuro */
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 2px solid #333333; /* Línea negra */
+            color: #ffffff; /* Texto blanco */
+        }
+        .logo {
+            max-width: 150px;
+            height: auto;
+            border-radius: 50%; /* Hacer el logo circular */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+        }
+        .header-content {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        nav a {
+            color: #ffffff; /* Texto blanco */
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            flex: 1;
+            padding: 20px;
+            background-color: #ffffff; /* Fondo blanco */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h2 {
+            color: #2c3e50; /* Gris oscuro */
+            margin-bottom: 20px; /* Espacio debajo del título */
+            text-align: center;
+        }
+        .carousel-container {
+            width: 100%;
+            max-width: 800px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            margin-top: 20px; /* Añadido para separar las flechas del texto */
+        }
+        .carousel {
+            display: flex;
+            overflow: hidden;
+            width: 100%;
+            border: 2px solid #f4f4f4; /* Borde gris oscuro */
+            border-radius: 10px;
+            background-color: #2c3e50; /* Fondo gris claro */
+        }
+        .carousel-inner {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        .carousel-item {
+            min-width: 100%;
+            box-sizing: border-box;
+            padding: 20px;
+            text-align: center;
+        }
+        .carousel-item h3 {
+            color: #ffffff; /* Gris oscuro */
+        }
+        .carousel-item p {
+            color: #ffffff; /* Texto negro */
+        }
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.7); /* Más opaco para mejor visibilidad */
+            border: none;
+            color: #ffffff;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 1;
+            width: 40px; /* Ancho de la flecha */
+            height: 40px; /* Alto de la flecha */
+            border-radius: 50%; /* Redondear las flechas */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background-color 0.3s ease; /* Transición suave al cambiar el color */
+        }
+        .carousel-button:hover {
+            background-color: rgba(255, 255, 255, 0.5); /* Fondo blanco semi-transparente al pasar el cursor */
+            color: #2c3e50; /* Color del icono al pasar el cursor */
+        }
+        .carousel-button.prev {
+            left: -50px; /* Separación de la izquierda */
+        }
+        .carousel-button.next {
+            right: -50px; /* Separación de la derecha */
+        }
+        footer {
+            background-color: #ffffff; /* Fondo blanco */
+            padding: 20px;
+            text-align: left;
+            border-top: 2px solid #333333; /* Línea negra */
+        }
+        .contact-info-footer {
+            display: flex;
+            justify-content: space-between;
+            background-color: #2c3e50; /* Azul marino */
+            color: #ffffff; /* Texto blanco */
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #333333; /* Borde negro */
+            margin-top: 20px;
+        }
+        .contact-info-section {
+            flex: 1;
+            margin-right: 20px;
+        }
+        .contact-info-section h2 {
+            color: #ffffff; /* Texto blanco */
+            text-align: left;
+        }
+        .contact-info-section p {
+            text-align: left;
+            margin: 0; /* Aseguramos que no haya margen adicional */
+            padding-bottom: 5px; /* Espacio entre líneas */
+        }
+        .branches-section {
+            flex: 1;
+        }
+        .branches-section h2 {
+            color: #ffffff; /* Texto blanco */
+            text-align: left;
+        }
+        .branches-section ul {
+            text-align: left;
+            margin: 0; /* Aseguramos que no haya margen adicional */
+            padding-left: 20px; /* Indentación para la lista */
+        }
+        .branches-section ul li {
+            list-style-type: disc; /* Puntos para la lista */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="/static/Logo prueba 2.jpeg" alt="Logo de Bee Group S.A." class="logo">
+        <div class="header-content">
+            <nav>
+                <a href="Bee_Group.html">Inicio</a>
+                <a href="#">Servicios</a>
+                <a href="Nosotros.html">Nosotros</a>
+                <a href="#">Contacto</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <h2>Servicios de Bee Group S.A.</h2>
+        <div class="carousel-container">
+            <button class="carousel-button prev" onclick="prevSlide()">&#10094;</button>
+            <div class="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item">
+                        <h3>Préstamos Personales</h3>
+                        <p>Ofrecemos préstamos personales con condiciones flexibles y tasas competitivas, diseñados para ayudar a nuestros clientes a alcanzar sus metas financieras. Ya sea para consolidar deudas, cubrir gastos inesperados o realizar una compra importante, nuestras soluciones de crédito personal están aquí para apoyarles.</p>
+                    </div>
+                    <div class="carousel-item">
+                        <h3>Préstamos Empresariales</h3>
+                        <p>Apoyamos a pequeñas y medianas empresas con financiamiento que les permite crecer y expandirse. Nuestros préstamos empresariales están diseñados para proporcionar capital de trabajo, financiar la compra de equipos y apoyar proyectos de expansión.</p>
+                    </div>
+                    <div class="carousel-item">
+                        <h3>Asesoría Financiera</h3>
+                        <p>Nuestro equipo de expertos ofrece asesoría financiera personalizada para ayudar a nuestros clientes a tomar decisiones informadas sobre sus finanzas. Desde planificación de inversiones hasta estrategias de ahorro, estamos aquí para guiarles en cada paso del camino.</p>
+                    </div>
+                    <div class="carousel-item">
+                        <h3>Gestión de Inversiones</h3>
+                        <p>Ofrecemos servicios de gestión de inversiones para individuos y empresas, ayudándoles a maximizar sus retornos y alcanzar sus objetivos financieros a largo plazo. Nuestros asesores trabajan estrechamente con los clientes para diseñar portafolios de inversión que se alineen con sus metas y tolerancia al riesgo.</p>
+                    </div>
+                    <div class="carousel-item">
+                        <h3>Educación Financiera</h3>
+                        <p>En Bee Group S.A., creemos en la importancia de la educación financiera. Ofrecemos talleres y seminarios para educar a nuestros clientes sobre la gestión de sus finanzas, el ahorro, la inversión y la planificación para el futuro.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-button next" onclick="nextSlide()">&#10095;</button>
+        </div>
+    </main>
+    <footer>
+        <div class="contact-info-footer">
+            <div class="contact-info-section">
+                <h2>Información de Contacto</h2>
+                <p><strong>Teléfono:</strong> 123-456-7890</p>
+                <p><strong>Celular:</strong> 0985-701-545</p>
+                <p><strong>Correo Electrónico:</strong> serviciosbeegroup@gmail.com</p>
+                <p><strong>Dirección:</strong> Pettirossi 488 e/ Pai Perez y Peru Asunción, Paraguay</p>
+            </div>
+            <div class="branches-section">
+                <h2>Sucursales</h2>
+                <p>Visítenos en nuestras sucursales para recibir atención personalizada:</p>
+                <ul>
+                    <li>Asunción: Av. Mariscal López 1234</li>
+                    <li>Encarnación: Calle Padre Kreusser 567</li>
+                    <li>Ciudad del Este: Av. Bernardino Caballero 890</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Funciones para el carousel
+        let currentIndex = 0;
+        const items = document.querySelectorAll('.carousel-item');
+        const totalItems = items.length;
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % totalItems;
+            updateCarousel();
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+            updateCarousel();
+        }
+
+        function updateCarousel() {
+            const offset = -currentIndex * 100 + '%';
+            document.querySelector('.carousel-inner').style.transform = `translateX(${offset})`;
+        }
+    </script>
+</body>
+</html>
